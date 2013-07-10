@@ -1,4 +1,9 @@
-<form class='form-signin' action="backend" method="POST">
+<?php 
+$attributes = array('class' => 'form-signin');
+echo form_open('backend/doLogin', $attributes);
+?>
+
+<!-- <form class='form-signin' action="backend" method="POST"> -->
 	<h2 class='form-signin-heading'>Log In!</h2>
 		
 	<div class="control-group <?php if(form_error("user")){ echo 'error'; }?>">
