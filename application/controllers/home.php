@@ -2,35 +2,7 @@
 
 class Home extends MY_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -  
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in 
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see http://codeigniter.com/user_guide/general/urls.html
-	 */
-	public $layout;
 
-	public function __construct()
-	{
-		parent::__construct();
-		$this->layout = 'frontend/layout/master';
-	}
-
-	public function index()
-	{
-		$data['title'] = 'Home';
-		$data['content'] = 'frontend/home';
-		$this->load->view($this->layout, $data);
-	}
 }
 
 /* End of file home.php */
