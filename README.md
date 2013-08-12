@@ -29,8 +29,8 @@ change the database, username and password to fit your infos.
 
 ##TODO
 
-[x] Database initialization.
-[x] Master templates for backend and frontend.
-[ ] Login functionality.
-[ ] CURD functionality.
-[ ] Mailing functionality.
+- [x] Database initialization.
+- [x] Master templates for backend and frontend.
+- [ ] Login functionality.
+- [ ] CURD functionality.
+- [ ] Mailing functionality.
