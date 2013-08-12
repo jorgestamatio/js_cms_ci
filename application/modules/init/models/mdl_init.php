@@ -5,7 +5,7 @@
 
 		$q1 = "CREATE TABLE app_users (
 		 username varchar(30) primary key,
-		 password varchar(32),
+		 password varchar(255),
 		 userid varchar(32),
 		 userlevel tinyint(1) unsigned not null,
 		 email varchar(50),
