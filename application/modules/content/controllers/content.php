@@ -1,4 +1,4 @@
-<?php
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Content extends MX_Controller{
 
@@ -14,11 +14,8 @@ class Content extends MX_Controller{
 		$data['module'] = 'content';
 		$data['view_file'] = 'display';
 
-		echo Modules::run('templates/master', $data);
+		echo Modules::run('templates/backend', $data);
 
-		echo 'Hello';
-
-		//$this->load->view('content');
 	}
 
 

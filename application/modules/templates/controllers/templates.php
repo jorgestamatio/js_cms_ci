@@ -6,7 +6,13 @@ class Templates extends MX_Controller{
 		parent::__construct();
 	}
 
-	function master($data){
-		$this->load->view('master', $data);
+	function frontend($data){
+		$this->load->view('frontend', $data);
 	}
+
+	function backend($data){
+		$this->load->view('backend', $data);
+	}
+
+
 }
