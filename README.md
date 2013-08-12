@@ -11,21 +11,32 @@ The CMS will be structured using the HMVC Modular extension from [wiredesignz](h
 
 ## Configure
 
-In js_cms_ci/application/config/config.php 
+In 
+    js_cms_ci/application/config/config.php 
 
 change the following line to the URL to your folder on your server
 
     $config['base_url'] = 'http://localhost:8888/js_cms_ci/';
 
-In js_cms_ci/application/config/database.php
+In 
+    js_cms_ci/application/config/development/database.php
+    js_cms_ci/application/config/production/database.php
 
-change the database, username and password to fit your infos.
+change the database, username and password to fit your development and production environments.
 
     $db['default']['hostname'] = 'localhost';
     $db['default']['username'] = 'localhost';
     $db['default']['password'] = 'localhost';
     $db['default']['database'] = 'test';
 
+## Mod Rewrite
+If your server supports mod rewrite, create an .htaccess file inside the main js_cms_ci folder and add the next lines.
+    
+    RewriteEngine on
+    RewriteCond $1 !^(index\.php|resources|robots\.txt)
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php/$1 [L,QSA]
 
 ##TODO
 
