@@ -83,7 +83,7 @@ $config['GUEST_TIMEOUT'] = 5;
  * sends to users, and whether to send a
  * welcome email to newly registered users.
  */
-$config['EMAIL_FROM_NAME'] = "Loz";
+$config['EMAIL_FROM_NAME'] = "App";
 $config['EMAIL_FROM_ADDR'] = "info@webdesignandphoto.com";
 $config['EMAIL_SMTP_HOST'] = "mail.webdesignandphoto.com";
 $config['EMAIL_SMTP_PORT'] = 587;
