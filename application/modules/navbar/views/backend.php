@@ -17,7 +17,7 @@
         <li><a href="#">Link</a></li>
       </ul>
       <ul class="nav navbar-nav pull-right">
-        <li><a href='#'>Hello <?=$username?></a></li>
+        <li><a href='#'>Hello <?=isset($username) ? $username : 'you!'?></a></li>
         <li><a href="auth/logout">Logout</a></li>   
       </ul>
     </div><!-- /.nav-collapse -->

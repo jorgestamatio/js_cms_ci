@@ -11,7 +11,7 @@ class Init extends MX_Controller {
 		$this->data['module'] = 'init';
 		$this->data['title'] = 'Initialize Database';
 
-		if ($this->db->table_exists('app_users')){	
+		if ($this->db->table_exists('users')){	
 			$this->isCreated = true;
 			$this->data['view_file'] = 'init_created';
 		}
@@ -38,7 +38,8 @@ class Init extends MX_Controller {
 		else{
 
 			$this->load->model('mdl_init');
-			$response = $this->mdl_init->createTables();
+			// $response = $this->mdl_init->createTables();
+			$response = $this->mdl_init->createIonAuthTables();
 
 			if($response){
 				$this->data['view_file'] = 'init_success';
@@ -56,7 +57,9 @@ class Init extends MX_Controller {
 
 	function deleteTables(){
 		$this->load->model('mdl_init');
-		$response = $this->mdl_init->deleteTables();
+		// $response = $this->mdl_init->deleteTables();
+		$response = $this->mdl_init->dropTablesIonAuth();
+		
 
 		if($response){
 			$this->data['view_file'] = 'init';
