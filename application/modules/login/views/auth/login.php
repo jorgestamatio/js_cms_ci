@@ -7,11 +7,10 @@
   <?php endif; ?>
 
     <?php echo form_open("auth/login",'class="form"');?>
-      <?php echo lang('login_identity_label', 'identity');?>
-      <?php echo form_input($identity);?>
 
-      <?php echo lang('login_password_label', 'password');?>
-      <?php echo form_input($password);?>
+      <?php echo form_input_bs($identity,'',lang('login_identity_label'));?>
+
+      <?php echo form_input_bs($password, '', lang('login_password_label'));?>
 
       <?php echo lang('login_remember_label', 'remember');?>
       <?php echo form_checkbox('remember', '1', FALSE, 'id="remember" class="input"');?>

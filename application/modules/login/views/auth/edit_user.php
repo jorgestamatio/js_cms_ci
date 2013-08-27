@@ -1,3 +1,6 @@
+<?php echo Modules::run('navbar/backend'); ?>
+
+<div class="col-lg-5">
 <h1><?php echo lang('edit_user_heading');?></h1>
 <p><?php echo lang('edit_user_subheading');?></p>
 
@@ -5,35 +8,17 @@
 
 <?php echo form_open(uri_string());?>
 
-      <p>
-            <?php echo lang('edit_user_fname_label', 'first_name');?> <br />
-            <?php echo form_input($first_name);?>
-      </p>
+        <?php echo form_input_bs($first_name,'',lang('edit_user_fname_label'));?>
+      
+        <?php echo form_input_bs($last_name,'',lang('edit_user_lname_label'));?>
 
-      <p>
-            <?php echo lang('edit_user_lname_label', 'last_name');?> <br />
-            <?php echo form_input($last_name);?>
-      </p>
+        <?php echo form_input_bs($company,'',lang('edit_user_company_label'));?>
 
-      <p>
-            <?php echo lang('edit_user_company_label', 'company');?> <br />
-            <?php echo form_input($company);?>
-      </p>
+        <?php echo form_input_bs($phone,'',lang('edit_user_phone_label'));?>
 
-      <p>
-            <?php echo lang('edit_user_phone_label', 'phone');?> <br />
-            <?php echo form_input($phone);?>
-      </p>
+        <?php echo form_input_bs($password,'',lang('edit_user_password_label'));?>
 
-      <p>
-            <?php echo lang('edit_user_password_label', 'password');?> <br />
-            <?php echo form_input($password);?>
-      </p>
-
-      <p>
-            <?php echo lang('edit_user_password_confirm_label', 'password_confirm');?><br />
-            <?php echo form_input($password_confirm);?>
-      </p>
+        <?php echo form_input_bs($password_confirm,'',lang('edit_user_password_confirm_label')); ?>
 
 	 <h3><?php echo lang('edit_user_groups_heading');?></h3>
 	<?php foreach ($groups as $group):?>
@@ -57,6 +42,9 @@
       <?php echo form_hidden('id', $user->id);?>
       <?php echo form_hidden($csrf); ?>
 
-      <p><?php echo form_submit('submit', lang('edit_user_submit_btn'));?></p>
-
+      <?php echo form_submit('submit', lang('edit_user_submit_btn'), 'class="btn btn-success pull-right"');?>
+      <?php echo anchor('auth', '<span class="glyphicon glyphicon-arrow-left"></span> Back', 'class="btn btn-default pull-left"'); ?>
 <?php echo form_close();?>
+      
+
+</div>
