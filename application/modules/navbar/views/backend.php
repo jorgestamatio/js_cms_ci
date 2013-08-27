@@ -17,7 +17,17 @@
         <li><a href="#">Link</a></li>
       </ul>
       <ul class="nav navbar-nav pull-right">
-        <li><a href='<?=base_url()?>auth'>Hello <?=isset($username) ? $username : 'you!'?></a></li>
+        <?php if (!$this->ion_auth->is_admin()) :?>
+        <li><a href='#'>Hello <?=isset($username) ? $username : 'you!'?></a></li>
+        <?php else : ?>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hello <?=isset($username) ? $username : 'you!'?> <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href='<?=base_url()?>auth'>Users</a></li>
+            <li><a href="#">Info</a></li>
+          </ul>
+        </li>
+        <?php endif; ?>
         <li><a href="<?=base_url()?>auth/logout">Logout</a></li>   
       </ul>
     </div><!-- /.nav-collapse -->

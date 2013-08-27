@@ -752,7 +752,7 @@ class Auth extends MX_Controller {
 
 		if ($this->ion_auth->logged_in()){
 			$user = $this->ion_auth->user()->row();
-			$this->viewdata['username'] = $user->username;
+			$this->viewdata['username'] = $user->first_name;
 		}
 
 		// $view_html = $this->load->view($view, $this->viewdata, $render);

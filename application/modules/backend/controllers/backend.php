@@ -15,7 +15,7 @@ class Backend extends MX_Controller{
 
 		$user = $this->ion_auth->user()->row();
 
-		$data['username'] = $user->username;
+		$data['username'] = $user->first_name;
 		$data['module'] = 'backend';
 		$data['view_file'] = 'dashboard';
 
