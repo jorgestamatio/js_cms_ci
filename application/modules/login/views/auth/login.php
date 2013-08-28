@@ -15,7 +15,7 @@
       <?php echo lang('login_remember_label', 'remember');?>
       <?php echo form_checkbox('remember', '1', FALSE, 'id="remember" class="input"');?>
 
-      <?php echo form_submit('submit', lang('login_submit_btn'), 'class="btn btn-info btn-block"');?>
+      <?php echo form_submit('submit', lang('login_submit_btn'), 'class="btn btn-danger btn-block"');?>
     <?php echo form_close();?>
   <hr>
   <a href="auth/forgot_password"><?php echo lang('login_forgot_password');?></a>
