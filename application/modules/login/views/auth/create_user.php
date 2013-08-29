@@ -1,46 +1,38 @@
-<h1><?php echo lang('create_user_heading');?></h1>
+<?php echo Modules::run('navbar/backend'); ?>
+<h2><?php echo lang('create_user_heading');?></h2>
 <p><?php echo lang('create_user_subheading');?></p>
-
-<div id="infoMessage"><?php echo $message;?></div>
+<hr>
+<div class="<?=$this->config->item('BACKEND_EDIT_WIDTH')?>">
+<?php if($message != '') : ?>
+    <div id="infoMessage" class="alert alert-info"><?php echo $message;?></div>
+<?php endif; ?>
 
 <?php echo form_open("auth/create_user");?>
 
-      <p>
-            <?php echo lang('create_user_fname_label', 'first_name');?> <br />
-            <?php echo form_input($first_name);?>
-      </p>
+      
+       <?php echo form_input_bs($first_name,'',lang('create_user_fname_label'));?>
+      
 
-      <p>
-            <?php echo lang('create_user_lname_label', 'first_name');?> <br />
-            <?php echo form_input($last_name);?>
-      </p>
+       <?php echo form_input_bs($last_name,'',lang('create_user_lname_label'));?>
+      
 
-      <p>
-            <?php echo lang('create_user_company_label', 'company');?> <br />
-            <?php echo form_input($company);?>
-      </p>
+       <?php echo form_input_bs($company,'',lang('create_user_company_label'));?>
+      
 
-      <p>
-            <?php echo lang('create_user_email_label', 'email');?> <br />
-            <?php echo form_input($email);?>
-      </p>
+       <?php echo form_input_bs($email,'',lang('create_user_email_label'));?>
+      
 
-      <p>
-            <?php echo lang('create_user_phone_label', 'phone');?> <br />
-            <?php echo form_input($phone);?>
-      </p>
+       <?php echo form_input_bs($phone,'',lang('create_user_phone_label'));?>
+      
 
-      <p>
-            <?php echo lang('create_user_password_label', 'password');?> <br />
-            <?php echo form_input($password);?>
-      </p>
+       <?php echo form_input_bs($password,'',lang('create_user_password_confirm_label'));?>
+      
 
-      <p>
-            <?php echo lang('create_user_password_confirm_label', 'password_confirm');?> <br />
-            <?php echo form_input($password_confirm);?>
-      </p>
+       <?php echo form_input_bs($password_confirm,'',lang('create_user_password_confirm_label'));?>
+      
 
 
-      <p><?php echo form_submit('submit', lang('create_user_submit_btn'));?></p>
+      <p><?php echo form_submit('submit', lang('create_user_submit_btn'),'class="btn btn-success"');?></p>
 
 <?php echo form_close();?>
+</div>

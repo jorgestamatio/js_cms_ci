@@ -10,6 +10,15 @@
 */
 date_default_timezone_set('Europe/Berlin');
 
+/**
+* Layout
+*
+*/
+$config['BACKEND_EDIT_WIDTH'] = 'col-sm-5';
+
+
+
+
 
 /**
 * Company information

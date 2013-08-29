@@ -81,8 +81,8 @@ $config['max_rounds']     = 9;
  | The controller should check this function and act
  | appropriately. If this variable set to 0, there is no maximum.
  */
-$config['site_title']                 = "Example.com";       // Site Title, example.com
-$config['admin_email']                = "admin@example.com"; // Admin Email, admin@example.com
+$config['site_title']                 = "jstamatio.com";       // Site Title, example.com
+$config['admin_email']                = "js@jstamatio.com"; // Admin Email, admin@example.com
 $config['default_group']              = 'members';           // Default group, use name
 $config['admin_group']                = 'admin';             // Default administrators group, use name
 $config['identity']                   = 'first_name';             // A database column which is used to login with
@@ -109,7 +109,15 @@ $config['forgot_password_expiration'] = 0;                   // The number of mi
  */
 $config['use_ci_email'] = TRUE; // Send Email using the builtin CI email class, if false it will return the code and the identity
 $config['email_config'] = array(
-	'mailtype' => 'html',
+	'mailtype'    => 'html',
+	//'protocol'    => 'smtp',
+	//'smtp_host'   => 'ssl://smtp.googlemail.com',
+	//'smtp_port'   => '465',
+	//'smtp_timeout'=> '30',
+	//'smtp_user'   => 'jorge.stamatio@gmail.com',
+	//'smtp_pass'   => 'password',  
+	'charset'     => 'utf-8',  
+	'newline'     => "\r\n",
 );
 
 /*

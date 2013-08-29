@@ -1,7 +1,7 @@
 <?php echo Modules::run('navbar/backend'); ?>
 
-<div class="col-lg-5">
-<h1><?php echo lang('edit_user_heading');?></h1>
+<div class="<?=$this->config->item('BACKEND_EDIT_WIDTH')?>">
+<h2><?php echo lang('edit_user_heading');?></h2>
 <p><?php echo lang('edit_user_subheading');?></p>
 
 <div id="infoMessage"><?php echo $message;?></div>

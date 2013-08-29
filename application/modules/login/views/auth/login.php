@@ -18,5 +18,5 @@
       <?php echo form_submit('submit', lang('login_submit_btn'), 'class="btn btn-danger btn-block"');?>
     <?php echo form_close();?>
   <hr>
-  <a href="auth/forgot_password"><?php echo lang('login_forgot_password');?></a>
+  <a href="<?=base_url()?>auth/forgot_password"><?php echo lang('login_forgot_password');?></a>
 </div>
