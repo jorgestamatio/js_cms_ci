@@ -22,4 +22,7 @@ class Backend extends MX_Controller{
 		echo Modules::run('templates/backend', $data);
 	}
 
+
+	
+
 }

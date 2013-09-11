@@ -7,7 +7,7 @@ class Mdl_content extends CI_Model {
 	}
 
 	function get_table() {
-		$table = "Content";
+		$table = "content";
 		return $table;
 	}
 

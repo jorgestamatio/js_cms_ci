@@ -14,5 +14,9 @@ class Templates extends MX_Controller{
 		$this->load->view('backend', $data);
 	}
 
+	function init($data){
+		$this->load->view('init', $data);
+	}
+
 
 }

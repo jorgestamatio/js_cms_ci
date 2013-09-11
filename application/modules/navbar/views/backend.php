@@ -14,7 +14,7 @@
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
       <li class="active"><a href="<?=base_url()?>backend">Home</a></li>
-      <li><a href="#">Link</a></li>
+      <li><a href="<?=base_url()?>content">Content</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
     <?php if (!$this->ion_auth->is_admin()) :?>
@@ -32,3 +32,4 @@
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>
+
