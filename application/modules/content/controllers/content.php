@@ -7,13 +7,19 @@ class Content extends MX_Controller{
 	function __construct() {
 		parent::__construct();
 
+		$this->load->model('mdl_content');
+
+		if (!$this->ion_auth->logged_in())
+		{
+			redirect('login');
+		} 
+
 		$user = $this->ion_auth->user()->row();
 		$this->data['username'] = $user->first_name;
-
+		$this->data['content_active'] = true;
 	}
 
 	function index(){
-		$this->load->model('mdl_content');
 
 		$this->data['query'] = $this->mdl_content->get('title');
 
@@ -26,14 +32,12 @@ class Content extends MX_Controller{
 
 	
 	function add(){
-		$this->load->model('mdl_content');
 
 		$data = array(
    			'title' => 'new' ,
    			'lang' => 'en' ,
    			'content' => 'content'
 		);
-
 
 		$this->mdl_content->_insert($data);
 
@@ -42,9 +46,11 @@ class Content extends MX_Controller{
 
 
 	function edit($id){
-		$this->load->model('mdl_content');
 
-		$this->data['query'] = $this->mdl_content->get_where($id);
+		//$this->data['query'] = $this->mdl_content->get_where($id);
+		$query = $this->mdl_content->get_where($id);
+		$this->data['row'] = $query->row();
+
 
 
 		$this->data['module'] = 'content';
@@ -53,5 +59,21 @@ class Content extends MX_Controller{
 		echo Modules::run('templates/backend', $this->data);
 	}
 
+	function save(){
+		$id = $this->input->post('id', TRUE);
+		$title = $this->input->post('title', TRUE);
+		$content = $this->input->post('content', TRUE);
+
+		$data = array(
+   			'title' => $title ,
+   			'lang' => 'en' ,
+   			'content' => $content
+		);
+
+		$this->mdl_content->_update($id,$data);
+
+		$this->index();
+
+	}
 
 }

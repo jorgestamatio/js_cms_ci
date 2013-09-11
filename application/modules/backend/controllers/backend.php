@@ -2,6 +2,8 @@
 
 class Backend extends MX_Controller{
 
+	public $data = array();
+
 	function __construct() {
 		parent::__construct();
 		if (!$this->ion_auth->logged_in())
@@ -15,11 +17,12 @@ class Backend extends MX_Controller{
 
 		$user = $this->ion_auth->user()->row();
 
-		$data['username'] = $user->first_name;
-		$data['module'] = 'backend';
-		$data['view_file'] = 'dashboard';
+		$this->data['username'] = $user->first_name;
+		$this->data['module'] = 'backend';
+		$this->data['view_file'] = 'dashboard';
+		$this->data['home_active'] = true;
 
-		echo Modules::run('templates/backend', $data);
+		echo Modules::run('templates/backend', $this->data);
 	}
 
 

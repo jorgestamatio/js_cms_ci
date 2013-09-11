@@ -1,6 +1,9 @@
 $(document).ready(function(){
 
 
+$('#editor').wysihtml5();
+
+
 $('[data-ajax-link]').click(function(e){
 	e.preventDefault();
 
