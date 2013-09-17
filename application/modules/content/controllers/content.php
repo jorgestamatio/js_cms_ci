@@ -30,6 +30,21 @@ class Content extends MX_Controller{
 
 	}
 
+
+	function categories(){
+
+		$this->data['query'] = Modules::run('categories/getCategories');
+		$this->data['module'] = 'content';
+		$this->data['view_file'] = 'categories';
+
+		echo Modules::run('templates/backend', $this->data);
+
+	}
+
+	function addCategories(){
+
+	}
+
 	
 	function add(){
 

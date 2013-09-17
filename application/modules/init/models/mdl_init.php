@@ -120,12 +120,19 @@
 				  id int(11) unsigned NOT NULL AUTO_INCREMENT,
 				  title varchar(20) NOT NULL,
 				  lang varchar(10) NOT NULL,
+				  category varchar(25) NOT NULL,
 				  content text,
 				  PRIMARY KEY (id)
 				) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
 
+		$q2 = "CREATE TABLE categories (
+				  id int(11) unsigned NOT NULL AUTO_INCREMENT,
+				  category varchar(25) NOT NULL,
+				  PRIMARY KEY (id)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
 
-		if($this->db->query($q1)){ 
+
+		if($this->db->query($q1) && $this->db->query($q2)){ 
 			$response = true;
 		}else{
 			$response = false;
@@ -147,7 +154,7 @@
 	}
 
 	function dropTableContent(){
-		if($this->db->query("DROP TABLES IF EXISTS content")){
+		if($this->db->query("DROP TABLES IF EXISTS content,categories")){
 			$response = true;
 		}else{
 			$response = false;
