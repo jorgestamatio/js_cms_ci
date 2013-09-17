@@ -41,9 +41,7 @@ class Content extends MX_Controller{
 
 	}
 
-	function addCategories(){
-
-	}
+	
 
 	
 	function add(){

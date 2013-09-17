@@ -24,6 +24,7 @@
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hello <?=isset($username) ? $username : 'you!'?> <b class="caret"></b></a>
         <ul class="dropdown-menu">
           <li><a href='<?=base_url()?>auth'>Users</a></li>
+          <li><a href='<?=base_url()?>categories'>Categories</a></li>
           <li><a href='<?=base_url()?>init'>Init</a></li>
         </ul>
       </li>
