@@ -1,3 +1,5 @@
-body{
-	padding-top: 40px;
+@import "sidebar.css";
+
+#main{
+	min-height: 2000px;
 }

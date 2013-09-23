@@ -11,6 +11,7 @@
 	<meta name="description" content="Janine and Jorge wedding invitation">
 	<link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap.min.css" type='text/css'>
 	<link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap-glyphicons.css" type='text/css'>
+	<link rel="stylesheet" href="<?=base_url()?>assets/css/sidebar.css" type='text/css'>
 	<link rel="stylesheet" href="<?=base_url()?>assets/css/frontend.css" type='text/css'>
 	<script src="<?=base_url()?>assets/js/vendor/modernizr-2.6.2.min.js"></script>
 
@@ -20,8 +21,42 @@
 </head>
 <body>
 
+<div id="main-container" class="main-wrapper" data-sidebar-show>
 
-<?php $this->load->view($module.'/'.$view_file); ?>
+			<nav class="sidebar" role="navigation">
+				<h2>Sidebar</h2>
+				<ul>
+					<li><a class="" href="de">Deutsch</a></li>
+					<li><a class="" href="en">English</a></li>
+				</ul>
+			</nav>
+
+			
+
+			<!-- content push wrapper -->
+			<div class="pusher">
+				
+
+				<div class="main-content"><!-- this is the wrapper for the content -->
+						
+						
+						<div id="main" class="clearfix">
+
+							<button data-toggle-sidebar>Menu</button>
+
+							<?php $this->load->view($module.'/'.$view_file); ?>
+
+
+						</div><!-- /main -->
+
+
+				</div><!-- /st-content -->
+
+			</div><!-- /st-pusher -->
+
+</div><!-- /st-container -->
+
+
 
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
