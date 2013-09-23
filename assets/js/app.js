@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+
+
+  $("[data-toggle-sidebar]").fastClick(toggleSidebar);
+  $("body").fastClick(function(){$("[data-sidebar-show]").removeClass("sidebar-open");});
   
   $('a.down').fastClick(function(e) {
     e.preventDefault();
@@ -9,6 +13,12 @@ $(document).ready(function(){
   })
   
   
+
+
+
+  function toggleSidebar(){
+    $("[data-sidebar-show]").toggleClass("sidebar-open");
+  }
 
   function scrollToItem(target,scroll){
     if(target == '#up'){
