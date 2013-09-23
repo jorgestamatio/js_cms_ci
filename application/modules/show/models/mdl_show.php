@@ -1,13 +1,13 @@
 <?php
 
-class Mdl_copythis extends CI_Model {
+class Mdl_show extends CI_Model {
 
 	function __construct() {
 		parent::__construct();
 	}
 
 	function get_table() {
-		$table = "table name here";
+		$table = "content";
 		return $table;
 	}
 
@@ -39,6 +39,7 @@ class Mdl_copythis extends CI_Model {
 		$query=$this->db->get($table);
 		return $query;
 	}
+
 
 	function _insert($data){
 		$table = $this->get_table();

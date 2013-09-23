@@ -86,4 +86,22 @@ class Mdl_content extends CI_Model {
 		return $query;
 	}
 
+	//More methods
+
+	function get_where_and($col, $col2, $value, $value2) {
+		$table = $this->get_table();
+		$this->db->where($col, $value);
+		$this->db->where($col2, $value2);
+		$query=$this->db->get($table);
+		return $query;
+	}
+
+	function get_unique_from($value){
+		$table = $this->get_table();
+		$this->db->distinct();
+		$this->db->select($value); 
+		$query = $this->db->get($table);
+		return $query;
+	}
+
 }

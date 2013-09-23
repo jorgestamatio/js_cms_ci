@@ -15,6 +15,7 @@
     <ul class="nav navbar-nav">
       <li class="<?=isset($home_active) ? 'active' : ''?>"><a href="<?=base_url()?>backend">Home</a></li>
       <li class='<?=isset($content_active) ? 'active' : ''?>'><a href="<?=base_url()?>content">Content</a></li>
+      <li class='<?=isset($guests_active) ? 'active' : ''?>'><a href="<?=base_url()?>guests">Guests</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
     <?php if (!$this->ion_auth->is_admin()) :?>

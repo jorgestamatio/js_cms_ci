@@ -45,5 +45,11 @@ $route['login'] = 'login/auth/login';
 $route['auth'] = 'login/auth';
 $route['auth/(.*)'] = 'login/auth/$1';
 
+$route['de'] = 'home/index';
+$route['en'] = 'home/index/en';
+
+$route['content/de'] = 'content/index';
+$route['content/en'] = 'content/index/en';
+
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

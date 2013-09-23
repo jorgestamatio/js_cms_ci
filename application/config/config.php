@@ -15,7 +15,7 @@
 |
 */
 $config['base_url']	= 'http://localhost/repos/js_cms_ci_hmvc/';
-
+//$config['base_url']	= 'http://jstamatio.com/js_cms_ci_hmvc/';
 /*
 |--------------------------------------------------------------------------
 | Index File

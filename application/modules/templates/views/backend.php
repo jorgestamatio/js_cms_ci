@@ -5,9 +5,10 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title><?php echo isset($title) ? "JS-CMS - $title" : $this->config->item('COMPANY_NAME'); ?></title>
 
-
+	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap.min.css" type='text/css'>
 	<link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap-glyphicons.css" type='text/css'>
 	<link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap-wysihtml5.css" type='text/css'>
@@ -24,8 +25,29 @@
 	<?php $this->load->view($module.'/'.$view_file); ?>
 </div>
 
+
+<div id="modal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+        <button type="button" class="btn btn-primary">Yes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="<?=base_url()?>assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script src="<?=base_url()?>assets/js/vendor/jQuery.fastClick.js"></script>
 <script src="<?=base_url()?>assets/js/vendor/bootstrap.min.js"></script>
 <script src="<?=base_url()?>assets/js/vendor/wysihtml5-0.3.0.min.js"></script>
 <script src="<?=base_url()?>assets/js/vendor/bootstrap-wysihtml5.js"></script>

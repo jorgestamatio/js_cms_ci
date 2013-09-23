@@ -1,13 +1,13 @@
 <?php
 
-class Mdl_copythis extends CI_Model {
+class Mdl_guests extends CI_Model {
 
 	function __construct() {
 		parent::__construct();
 	}
 
 	function get_table() {
-		$table = "table name here";
+		$table = "guests";
 		return $table;
 	}
 
@@ -84,23 +84,6 @@ class Mdl_copythis extends CI_Model {
 	function _custom_query($mysql_query) {
 		$query = $this->db->query($mysql_query);
 		return $query;
-	}
-
-	//More methods
-
-	function get_where_and($col, $col2, $value, $value2) {
-		$table = $this->get_table();
-		$this->db->where($col, $value);
-		$this->db->where($col2, $value2);
-		$query=$this->db->get($table);
-		return $query;
-	}
-
-	function get_unique_from($value){
-		$table = $this->get_table();
-		$this->db->distinct();
-		$this->db->select($value); 
-		$query = $this->db->get($table);
 	}
 
 }

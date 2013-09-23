@@ -14,9 +14,15 @@ date_default_timezone_set('Europe/Berlin');
 * Layout
 *
 */
-$config['BACKEND_EDIT_WIDTH'] = 'col-sm-5';
+$config['BACKEND_EDIT_WIDTH'] = 'col-md-10 col-md-offset-1';
 
 
+/**
+* Languages
+*
+*/
+$config['SITE_LANGUAGES_DEFAULT'] = 'de';
+$config['SITE_LANGUAGES_ENABLED'] = array('de','en');
 
 
 

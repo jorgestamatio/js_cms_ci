@@ -143,6 +143,32 @@
 	}
 
 
+	function createGuests(){
+		//
+		// Table structure for table 'content'
+		//
+
+		$q1 = "CREATE TABLE guests (
+				  id int(11) unsigned NOT NULL AUTO_INCREMENT,
+				  name varchar(20) NOT NULL,
+				  email varchar(100) NOT NULL,
+				  persons varchar(100) NOT NULL,
+				  PRIMARY KEY (id)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
+
+
+
+		if($this->db->query($q1)){ 
+			$response = true;
+		}else{
+			$response = false;
+		}
+
+		return $response;
+
+	}
+
+
 
 	function dropTablesIonAuth(){
 		if($this->db->query("DROP TABLES IF EXISTS users_groups, login_attempts, groups, users")){
@@ -155,6 +181,15 @@
 
 	function dropTableContent(){
 		if($this->db->query("DROP TABLES IF EXISTS content,categories")){
+			$response = true;
+		}else{
+			$response = false;
+		}
+		return $response;
+	}
+
+	function dropTableGuests(){
+		if($this->db->query("DROP TABLES IF EXISTS guests")){
 			$response = true;
 		}else{
 			$response = false;

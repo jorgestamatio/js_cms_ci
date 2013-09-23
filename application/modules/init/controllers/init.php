@@ -36,6 +36,12 @@ class Init extends MX_Controller {
 				$this->data['tableContent'] = "<a href='".site_url('init/createContent')."' class='btn btn-success'><span class='glyphicon glyphicon-trash'></span> Create table content</a>";
 			}
 
+			if ($this->db->table_exists('guests')){
+				$this->data['tableGuests'] = "<a href=".site_url('init/deleteGuests')." class='btn btn-danger'><span class='glyphicon glyphicon-trash'></span> Delete table guests</a>";
+			}else{
+				$this->data['tableGuests'] = "<a href='".site_url('init/createGuests')."' class='btn btn-success'><span class='glyphicon glyphicon-trash'></span> Create table guests</a>";
+			}
+
 		   	echo Modules::run('templates/backend', $this->data);
 		}
 		else{
@@ -103,6 +109,34 @@ class Init extends MX_Controller {
 		
 		if($response){
 			$this->data['tableContent'] = "<a href='".site_url('init/createContent')."' class='btn btn-success'><span class='glyphicon glyphicon-trash'></span> Create table content</a>";
+			echo Modules::run('templates/backend', $this->data);
+		}else{
+			$this->data['view_file'] = 'init_fail';
+			echo Modules::run('templates/backend', $this->data);
+		}
+	}
+
+
+	function createGuests(){
+
+		$response = $this->mdl_init->createGuests();
+		
+		if($response){
+				$this->data['tableGuests'] = "<a href=".site_url('init/deleteGuests')." class='btn btn-danger'><span class='glyphicon glyphicon-trash'></span> Delete table guests</a>";
+				echo Modules::run('templates/backend', $this->data);
+
+			}else{
+				$this->data['view_file'] = 'init_fail';
+				echo Modules::run('templates/backend', $this->data);
+			}
+	}
+
+	function deleteGuests(){
+
+		$response = $this->mdl_init->dropTableGuests();
+		
+		if($response){
+			$this->data['tableGuests'] = "<a href='".site_url('init/createGuests')."' class='btn btn-success'><span class='glyphicon glyphicon-trash'></span> Create table guests</a>";
 			echo Modules::run('templates/backend', $this->data);
 		}else{
 			$this->data['view_file'] = 'init_fail';

@@ -23,6 +23,9 @@
 		<div class="col-lg-3">
 			<?=$tableContent?>
 		</div>
+		<div class="col-lg-3">
+			<?=$tableGuests?>
+		</div>
 	</div>
 
 </div>

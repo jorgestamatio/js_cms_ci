@@ -1,24 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title><?php echo isset($title) ? "JS-CMS - $title" : $this->config->item('COMPANY_NAME'); ?></title>
-
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>J&ampJ</title>
+	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="Janine and Jorge wedding invitation">
 	<link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap.min.css" type='text/css'>
 	<link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap-glyphicons.css" type='text/css'>
-	<link rel="stylesheet" href="<?=base_url()?>assets/css/backend.css" type='text/css'>
+	<link rel="stylesheet" href="<?=base_url()?>assets/css/frontend.css" type='text/css'>
 	<script src="<?=base_url()?>assets/js/vendor/modernizr-2.6.2.min.js"></script>
+
+
+
+
 </head>
 <body>
 
-<div class="container-fluid">
-	<?php $this->load->view($module.'/'.$view_file); ?>
-</div>
+
+<?php $this->load->view($module.'/'.$view_file); ?>
+
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="<?=base_url()?>assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
 <script src="<?=base_url()?>assets/js/vendor/bootstrap.min.js"></script>
-<script src="<?=base_url()?>assets/js/main.js"></script>
+<script src="<?=base_url()?>assets/js/vendor/jQuery.fastClick.js"></script>
+<script src="<?=base_url()?>assets/js/app.js"></script>
+
 
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -28,7 +39,7 @@
     e=o.createElement(i);r=o.getElementsByTagName(i)[0];
     e.src='//www.google-analytics.com/analytics.js';
     r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-    ga('create','UA-XXXXX-X');ga('send','pageview');
+    ga('create','UA-25144875-1');ga('send','pageview');
 </script>
 </body>
 </html>
