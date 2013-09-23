@@ -94,9 +94,7 @@ class Init extends MX_Controller {
 		$response = $this->mdl_init->createContent();
 		
 		if($response){
-				$this->data['tableContent'] = "<a href=".site_url('init/deleteContent')." class='btn btn-danger'><span class='glyphicon glyphicon-trash'></span> Delete table content</a>";
-				echo Modules::run('templates/backend', $this->data);
-
+				redirect('init/index');
 			}else{
 				$this->data['view_file'] = 'init_fail';
 				echo Modules::run('templates/backend', $this->data);
@@ -108,8 +106,7 @@ class Init extends MX_Controller {
 		$response = $this->mdl_init->dropTableContent();
 		
 		if($response){
-			$this->data['tableContent'] = "<a href='".site_url('init/createContent')."' class='btn btn-success'><span class='glyphicon glyphicon-trash'></span> Create table content</a>";
-			echo Modules::run('templates/backend', $this->data);
+			redirect('init/index');
 		}else{
 			$this->data['view_file'] = 'init_fail';
 			echo Modules::run('templates/backend', $this->data);
@@ -122,8 +119,7 @@ class Init extends MX_Controller {
 		$response = $this->mdl_init->createGuests();
 		
 		if($response){
-				$this->data['tableGuests'] = "<a href=".site_url('init/deleteGuests')." class='btn btn-danger'><span class='glyphicon glyphicon-trash'></span> Delete table guests</a>";
-				echo Modules::run('templates/backend', $this->data);
+				redirect('init/index');
 
 			}else{
 				$this->data['view_file'] = 'init_fail';
@@ -136,8 +132,7 @@ class Init extends MX_Controller {
 		$response = $this->mdl_init->dropTableGuests();
 		
 		if($response){
-			$this->data['tableGuests'] = "<a href='".site_url('init/createGuests')."' class='btn btn-success'><span class='glyphicon glyphicon-trash'></span> Create table guests</a>";
-			echo Modules::run('templates/backend', $this->data);
+			redirect('init/index');
 		}else{
 			$this->data['view_file'] = 'init_fail';
 			echo Modules::run('templates/backend', $this->data);
