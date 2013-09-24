@@ -11,8 +11,16 @@
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap.min.css" type='text/css'>
   <link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap-glyphicons.css" type='text/css'>
-  <link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap-wysihtml5.css" type='text/css'>
-  <link rel="stylesheet" href="<?=base_url()?>assets/css/backend.css" type='text/css'>
+  <style>
+    .login-form {
+       margin-top: 10%;
+    }
+    .login-form input[type="checkbox"],
+    .login-form input[type="submit"] {
+      margin-bottom: 15px;
+    }
+  </style>
+  
   <script src="<?=base_url()?>assets/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
