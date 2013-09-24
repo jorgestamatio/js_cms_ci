@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-	<meta charset="utf-8">
-	<title><?php echo isset($title) ? "JS-CMS - $title" : $this->config->item('COMPANY_NAME'); ?></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title><?=$this->config->item('COMPANY_NAME')?><?php echo isset($title) ? "- $title" : "" ?></title>
 
-	<link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap.min.css" type='text/css'>
-	<link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap-glyphicons.css" type='text/css'>
-	<link rel="stylesheet" href="<?=base_url()?>assets/css/backend.css" type='text/css'>
-	<script src="<?=base_url()?>assets/js/vendor/modernizr-2.6.2.min.js"></script>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap.min.css" type='text/css'>
+  <link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap-glyphicons.css" type='text/css'>
+  <link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap-wysihtml5.css" type='text/css'>
+  <link rel="stylesheet" href="<?=base_url()?>assets/css/backend.css" type='text/css'>
+  <script src="<?=base_url()?>assets/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
 
@@ -28,7 +34,7 @@
     e=o.createElement(i);r=o.getElementsByTagName(i)[0];
     e.src='//www.google-analytics.com/analytics.js';
     r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-    ga('create','UA-XXXXX-X');ga('send','pageview');
+    ga('create','<?=$this->config->item('GOOGLE_ANALYTICS')?>');ga('send','pageview');
 </script>
 </body>
 </html>

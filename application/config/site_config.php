@@ -27,6 +27,13 @@ $config['SITE_LANGUAGES_DEFAULT'] = 'de';
 $config['SITE_LANGUAGES_ENABLED'] = array('de','en');
 
 
+/*
+* Google analytics code
+* 
+*/
+$config['GOOGLE_ANALYTICS'] = 'UA-44278524-1';
+
+
 
 /**
 * Company information

@@ -74,7 +74,7 @@
     e=o.createElement(i);r=o.getElementsByTagName(i)[0];
     e.src='//www.google-analytics.com/analytics.js';
     r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-    ga('create','UA-XXXXX-X');ga('send','pageview');
+    ga('create','<?=$this->config->item('GOOGLE_ANALYTICS')?>');ga('send','pageview');
 </script>
 </body>
 </html>
