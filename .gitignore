@@ -1,3 +1,4 @@
 .DS_Store
 .htaccess
 application/config/production/database.php
+index.php
