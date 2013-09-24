@@ -20,14 +20,15 @@ class Show extends MX_Controller{
 		return $query->row();
 	}
 
-	function title($title="Us",$lang='en'){
-		$query = $this->mdl_show->get_where_custom('title',$title);
-	    return $query->row('content');
-	}
-
 	function title_lang($title=null,$lang=null){
 		$query = $this->mdl_show->get_where_and('title','lang',$title,$lang);
-		return $query->row('content');
+		$result = $query->row('content');
+		if(is_array($result)){
+			return $title . ' in ' . $lang . ' has no content!';
+		}else{
+			return $result;
+		}
+		
 	}
 
 }

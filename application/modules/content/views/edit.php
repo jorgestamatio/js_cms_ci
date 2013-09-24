@@ -32,15 +32,15 @@ echo form_open('content/save', $attributes, $hidden);
     <div class="panel-footer clearfix">
 
       <a href="<?=base_url()?>content/delete/<?=$row->id?>/<?=$row->lang?>/<?=$row->category?>" 
-         class="btn btn-danger" 
+         class="<?=$this->config->item('DEL_BTN')?>" 
          data-require-confirm
          data-confirm-text="Are you sure you want to delete this?">
-        <span class="glyphicon glyphicon-trash"></span> Delete
+        <?=$this->config->item('DEL_ICON')?> <?=$this->config->item('DEL_TXT')?>
       </a>
 
       <div class="pull-right">
-        <?php echo anchor('content/'.$row->lang, 'Cancel', 'class="btn btn-default"'); ?>
-        <?php echo form_submit('submit', 'Save','class="btn btn-success"'); ?>
+        <?php echo anchor('content/'.$row->lang, $this->config->item('CANCEL_TXT'), 'class="'.$this->config->item('CANCEL_BTN').'"'); ?>
+        <?php echo form_submit('submit', $this->config->item('SAVE_TXT'),'class="'.$this->config->item('SAVE_BTN').'"'); ?>
       </div>
 
     </div>

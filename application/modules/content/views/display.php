@@ -29,13 +29,15 @@
   <?php endforeach; ?>  
   </div>
 
-  <a href="<?=site_url('content/add/'.$lang)?>" class="btn btn-success pull-right"><span class="glyphicon glyphicon-plus"></span> New</a>
+  <a href="<?=site_url('content/add/'.$lang)?>" class="<?=$this->config->item('NEW_BTN')?> pull-right">
+    <?=$this->config->item('NEW_ICON')?> <?=$this->config->item('NEW_TXT')?>
+  </a>
 
 <table class='table table-striped'>
   <thead>
     <th>Title</th>
     <th>Content</th>
-    <th>Edit</th>
+    <th class="text-right">Edit</th>
   </thead>
   <tbody>
   <?php foreach ($query->result() as $row) : ?>
@@ -43,7 +45,11 @@
       <td><?=$row->title?></td>
       <!-- <td><?=$row->content?></td> -->
       <td><?=substr($row->content,0,160).'...'?></td>
-      <td><a class='btn btn-small btn-info' href="<?=site_url()?>content/edit/<?=$row->id?>">Edit</a></td>
+      <td class="text-right">
+        <a class="<?=$this->config->item('EDIT_BTN')?>" href="<?=site_url()?>content/edit/<?=$row->id?>">
+        <?=$this->config->item('EDIT_ICON')?> <?=$this->config->item('EDIT_TXT')?>
+        </a>
+      </td>
     </tr>
   <?php endforeach; ?>
   </tbody>

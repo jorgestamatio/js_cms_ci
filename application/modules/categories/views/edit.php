@@ -16,13 +16,13 @@ echo form_open('categories/save', $attributes, $hidden);
     <div class="panel-footer clearfix">
 
       <a href="<?=base_url()?>categories/delete/<?=$row->id?>" 
-       class="btn btn-danger" 
+       class="<?=$this->config->item('DEL_BTN')?>" 
        data-require-confirm
        data-confirm-text="Are you sure you want to delete this?">
-      <span class="glyphicon glyphicon-trash"></span> Delete
+      <?=$this->config->item('DEL_ICON')?> <?=$this->config->item('DEL_TXT')?>
       </a>
 
-      <?php echo form_submit('submit', 'Save','class="pull-right btn btn-success"'); ?>
+      <?php echo form_submit('submit', $this->config->item('SAVE_TXT'),'class="'.$this->config->item('SAVE_BTN').'"'); ?>
 
     </div>
   </div>

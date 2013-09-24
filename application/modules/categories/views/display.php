@@ -1,5 +1,7 @@
 <h1>Categories</h1>
-<a href="<?=site_url('categories/add')?>" class="btn btn-success pull-right"><span class="glyphicon glyphicon-plus"></span> New</a>
+  <a href="<?=site_url('categories/add')?>" class="<?=$this->config->item('NEW_BTN')?> pull-right">
+    <?=$this->config->item('NEW_ICON')?> <?=$this->config->item('NEW_TXT')?>
+  </a>
 <table class='table table-striped'>
   <thead>
     <th>Category</th>
@@ -9,7 +11,11 @@
   <?php foreach ($query->result() as $row) : ?>
     <tr>
       <td><?=$row->category?></td>
-      <td><a class='btn btn-xs btn-default pull-right' href="<?=site_url()?>categories/edit/<?=$row->id?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
+      <td class="text-right">
+        <a class='<?=$this->config->item('EDIT_BTN')?>' href="<?=site_url()?>categories/edit/<?=$row->id?>">
+        <?=$this->config->item('EDIT_ICON')?> <?=$this->config->item('EDIT_TXT')?>
+        </a>
+      </td>
     </tr>
   <?php endforeach; ?>
   </tbody>

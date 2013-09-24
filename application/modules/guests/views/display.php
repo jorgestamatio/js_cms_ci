@@ -1,11 +1,13 @@
 <h1>Guests</h1>
-<a href="<?=site_url('guests/add')?>" class="btn btn-success pull-right" data-ajax-link><span class="glyphicon glyphicon-plus"></span> New</a>
+	<a href="<?=site_url('guests/add')?>" class="<?=$this->config->item('NEW_BTN')?> pull-right">
+    <?=$this->config->item('NEW_ICON')?> <?=$this->config->item('NEW_TXT')?>
+  </a>
 <table class='table table-striped'>
 	<thead>
 		<th>Name</th>
 		<th>Comming</th>
 		<th>Plus 1?</th>
-		<th>Edit</th>
+		<th class="text-right">Edit</th>
 	</thead>
 <tbody id='contentTable'>
 <?php foreach ($query->result() as $row) : ?>
@@ -14,7 +16,11 @@
 		<td><?=$row->name?></td>
 		<td><?=$row->email?></td>
 		<td><?=$row->persons?></td>
-		<td><a class='btn btn-small btn-info' href="<?=site_url()?>guests/edit/<?=$row->id?>">Edit</a></td>
+		<td class="text-right">
+			<a class="<?=$this->config->item('EDIT_BTN')?>" href="<?=site_url()?>guests/edit/<?=$row->id?>">
+			<?=$this->config->item('EDIT_ICON')?> <?=$this->config->item('EDIT_TXT')?>
+			</a>
+		</td>
 		
 	</tr>
 <?php endforeach; ?>

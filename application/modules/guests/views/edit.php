@@ -22,8 +22,10 @@ echo form_open('guests/save', $attributes, $hidden);
 		  </p>
 	  </div>
 	  <div class="panel-footer clearfix">
-	  <?php echo form_submit('submit', 'Save','class="pull-right btn btn-success"'); ?>
-	  <a href="<?=base_url()?>guests/delete/<?=$row->id?>" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Delete</a>
+	  <?php echo form_submit('submit', $this->config->item('SAVE_TXT'),'class="'.$this->config->item('SAVE_BTN').'"'); ?>
+	  <a href="<?=base_url()?>guests/delete/<?=$row->id?>" class="<?=$this->config->item('DEL_BTN')?>">
+	  <?=$this->config->item('DEL_ICON')?> <?=$this->config->item('DEL_TXT')?>
+	  </a>
 	  </div>
 	</div>
 <?php echo form_close(); ?>
