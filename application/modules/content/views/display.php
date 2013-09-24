@@ -5,14 +5,14 @@
   <ul class="dropdown-menu">
     <?php foreach ($categories->result() as $row): ?>
       <li class="<?= $category == $row->category ? 'active' : '' ?>">
-        <a href="<?=base_url()?>content/index/<?=$lang.'/'.$row->category?>">
+        <a href="<?=base_url()?>content/<?=$lang.'/'.$row->category?>">
           <?=$row->category?>
         </a>
       </li>
     <?php endforeach; ?>
       <li class="divider"></li>
       <li class="<?= $category == 'all' ? 'active' : '' ?>">
-        <a href="<?=base_url()?>content/index/<?=$lang.'/all'?>">
+        <a href="<?=base_url()?>content/<?=$lang.'/all'?>">
           all
         </a>
       </li>
@@ -22,7 +22,7 @@
   <div class="btn-group">
   <?php foreach ($this->config->item('SITE_LANGUAGES_ENABLED') as $row): ?>
      <a
-     href="<?=base_url()?>content/index/<?=$row.'/'.$category?>" 
+     href="<?=base_url()?>content/<?=$row.'/'.$category?>" 
      class="btn btn-info <?= $lang == $row ? 'active' : '' ?>">
      <?=$row?>
      </a>

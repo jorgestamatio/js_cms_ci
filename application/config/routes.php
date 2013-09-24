@@ -51,5 +51,9 @@ $route['en'] = 'home/index/en';
 $route['content/de'] = 'content/index';
 $route['content/en'] = 'content/index/en';
 
+$route['content/de/(:any)'] = 'content/index/de/$1';
+$route['content/en/(:any)'] = 'content/index/en/$1';
+
+
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

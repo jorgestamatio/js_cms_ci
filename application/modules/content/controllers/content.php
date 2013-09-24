@@ -56,7 +56,7 @@ class Content extends MX_Controller{
 
     $this->mdl_content->_insert($data);
 
-    $this->index($lang);
+    redirect('content/'.$lang);
   }
 
 
@@ -91,14 +91,15 @@ class Content extends MX_Controller{
 
     $this->mdl_content->_update($id,$data);
 
-    $this->index($lang,$category);
+    redirect('content/'.$lang.'/'.$category);
 
   }
 
 
   function delete($id,$lang,$category){
       $this->mdl_content->_delete($id);
-      $this->index($lang,$category);
+
+      redirect('content/'.$lang.'/'.$category);
     }
 
 

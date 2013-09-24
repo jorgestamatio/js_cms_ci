@@ -63,7 +63,7 @@ class Guests extends MX_Controller{
 
     $this->mdl_guests->_insert($data);
 
-    $this->index();
+    redirect('guests');
   }
 
 
@@ -112,7 +112,7 @@ class Guests extends MX_Controller{
 
     $this->mdl_guests->_update($id,$data);
 
-    $this->index();
+    redirect('guests');
 
   }
 
@@ -120,7 +120,7 @@ class Guests extends MX_Controller{
 
     $this->mdl_guests->_delete($id);
 
-    $this->index();
+    redirect('guests');
 
   }
 

@@ -45,7 +45,7 @@ class Categories extends MX_Controller{
 
 		$this->mdl_categories->_insert($data);
 
-		$this->index();
+		redirect('categories');
 	}
 
 
@@ -73,13 +73,13 @@ class Categories extends MX_Controller{
 
 		$this->mdl_categories->_update($id,$data);
 
-		$this->index();
+		redirect('categories');
 
 	}
 
 	function delete($id){
       $this->mdl_categories->_delete($id);
-      $this->index();
+      redirect('categories');
     }
 
 
