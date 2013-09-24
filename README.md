@@ -31,12 +31,16 @@ change the database, username and password to fit your development and productio
 
 ## Mod Rewrite
 If your server supports mod rewrite, create an .htaccess file inside the main js_cms_ci folder and add the next lines.
-    
+
+    DirectoryIndex index.php
+
     RewriteEngine on
-    RewriteCond $1 !^(index\.php|resources|robots\.txt)
+    RewriteBase /
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ index.php/$1 [L,QSA]
+    RewriteCond $1 !^(index\.php|robots\.txt)
+
+    RewriteRule ^(.*)$ index.php?/$1 [L]
 
 ##TODO
 
