@@ -1,6 +1,6 @@
 <?php echo Modules::run('navbar/backend'); ?>
 
-<div class="<?=$this->config->item('BACKEND_EDIT_WIDTH')?>">
+<div class="<?=$this->config->item('BACKEND_MAIN_CONTENT_WIDTH')?>">
 <h2><?php echo lang('edit_user_heading');?></h2>
 <p><?php echo lang('edit_user_subheading');?></p>
 

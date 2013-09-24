@@ -2,7 +2,7 @@
 <h2><?php echo lang('create_user_heading');?></h2>
 <p><?php echo lang('create_user_subheading');?></p>
 <hr>
-<div class="<?=$this->config->item('BACKEND_EDIT_WIDTH')?>">
+<div class="<?=$this->config->item('BACKEND_MAIN_CONTENT_WIDTH')?>">
 <?php if($message != '') : ?>
     <div id="infoMessage" class="alert alert-info"><?php echo $message;?></div>
 <?php endif; ?>

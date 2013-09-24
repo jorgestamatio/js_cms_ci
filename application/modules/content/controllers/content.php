@@ -21,10 +21,17 @@ class Content extends MX_Controller{
     $this->data['content_active'] = true;
   }
 
-  function index($lang=null){
+  function index($lang=null,$category='index'){
     if($lang == null){ $lang = $this->lang;}
 
-    $this->data['query'] = $this->mdl_content->get_where_custom('lang',$lang);
+    $this->data['category'] = $category;
+    $this->data['categories'] = Modules::run('categories/getCategories');
+
+    if($category == 'all'){
+      $this->data['query'] = $this->mdl_content->get_where_custom('lang',$lang);
+    }else{
+      $this->data['query'] = $this->mdl_content->get_where_and('lang','category',$lang,$category);
+    }
 
     $this->data['module'] = 'content';
     $this->data['view_file'] = 'display';
@@ -35,22 +42,15 @@ class Content extends MX_Controller{
   }
 
 
-  function categories(){
-
-    $this->data['query'] = Modules::run('categories/getCategories');
-    $this->data['module'] = 'content';
-    $this->data['view_file'] = 'categories';
-
-    echo Modules::run('templates/backend', $this->data);
-
-  }
-
   
-  function add($lang){
+  function add($lang,$category='index'){
+
+    if($category=='all'){ $category = 'index'; }
 
     $data = array(
         'title' => 'new' ,
         'lang' => $lang ,
+        'category' => $category,
         'content' => 'content'
     );
 
@@ -65,6 +65,8 @@ class Content extends MX_Controller{
     $query = $this->mdl_content->get_where($id);
     $this->data['row'] = $query->row();
 
+    $this->data['categories'] = Modules::run('categories/getCategories');
+
     $this->data['module'] = 'content';
     $this->data['view_file'] = 'edit';
 
@@ -78,23 +80,25 @@ class Content extends MX_Controller{
     $title = $this->input->post('title', TRUE);
     $content = $this->input->post('content', TRUE);
     $lang = $this->input->post('lang', TRUE);
+    $category = $this->input->post('category', TRUE);
 
     $data = array(
         'title' => $title ,
         'lang' => $lang ,
+        'category' => $category ,
         'content' => $content
     );
 
     $this->mdl_content->_update($id,$data);
 
-    $this->index($lang);
+    $this->index($lang,$category);
 
   }
 
 
-  function delete($id,$lang){
+  function delete($id,$lang,$category){
       $this->mdl_content->_delete($id);
-      $this->index($lang);
+      $this->index($lang,$category);
     }
 
 

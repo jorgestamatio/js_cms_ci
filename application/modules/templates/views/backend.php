@@ -22,7 +22,9 @@
 
 <?php echo Modules::run('navbar/backend'); ?>
 <div id='main-container' class="container-fluid">
-	<?php $this->load->view($module.'/'.$view_file); ?>
+  <div class="<?=$this->config->item('BACKEND_MAIN_CONTENT_WIDTH')?>">
+	 <?php $this->load->view($module.'/'.$view_file); ?>
+  </div>
 </div>
 
 

@@ -1,5 +1,4 @@
-<div class="container">
-	<h1>Edit</h1>
+<h1>Edit</h1>
 	
 <?php 
 $attributes = array('class' => 'edit', 'id' => 'save_edit');
@@ -28,4 +27,3 @@ echo form_open('guests/save', $attributes, $hidden);
 	  </div>
 	</div>
 <?php echo form_close(); ?>
-</div>

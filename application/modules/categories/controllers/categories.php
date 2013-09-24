@@ -17,6 +17,7 @@ class Categories extends MX_Controller{
 			redirect('content');
 		}
 
+
 		$user = $this->ion_auth->user()->row();
 		$this->data['username'] = $user->first_name;
 	}
@@ -75,6 +76,12 @@ class Categories extends MX_Controller{
 		$this->index();
 
 	}
+
+	function delete($id){
+      $this->mdl_categories->_delete($id);
+      $this->index();
+    }
+
 
 
 }
