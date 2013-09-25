@@ -139,6 +139,11 @@ body,
 	transform: translate3d(300px, 0, 0);
 }
 
+.touch .sidebar-open .pusher {
+	-webkit-transform: translate3d(250px, 0, 0);
+	transform: translate3d(250px, 0, 0);
+}
+
 .sidebar {
 	z-index: 1;
 	-webkit-transform: translate3d(-50%, 0, 0);

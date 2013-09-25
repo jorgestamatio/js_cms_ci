@@ -24,7 +24,7 @@
 <div id="main-container" class="main-wrapper" data-sidebar-show>
 
 	<nav class="sidebar" role="navigation">
-		<h2>Sidebar</h2>
+		<h2>Sidebar <button type="button" class="close pull-right" aria-hidden="true">&times;</button></h2>
 		<ul>
 			<li><a class="" href="de">Deutsch</a></li>
 			<li><a class="" href="en">English</a></li>

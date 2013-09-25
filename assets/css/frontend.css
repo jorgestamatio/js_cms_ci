@@ -6,9 +6,27 @@
 
 .sidebar-toggle-btn{
   position: absolute;
-  top: 30px;
+  top: 25px;
   left: 0;
   border-radius: 0;
   background: rgba(126,0,26,0.5);
-  padding-left: 50px;
+  border: none;
+  -webkit-transition: padding 0.5s;
+  transition: padding 0.5s;
+  font-size: 25px;
+}
+
+.sidebar-toggle-btn:hover,
+.sidebar-toggle-btn:active{
+  background: rgba(126,0,26,0.5);
+  border: none;
+}
+
+.no-touch .sidebar-toggle-btn:hover{
+  padding-left: 70px;
+}
+
+.sidebar .close{
+  line-height: 35px;
+  font-size: 30px;
 }
