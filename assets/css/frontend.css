@@ -1,5 +1,14 @@
-@import "sidebar.css";
+/*@import "sidebar.css";*/
 
 #main{
 	min-height: 2000px;
+}
+
+.sidebar-toggle-btn{
+  position: absolute;
+  top: 30px;
+  left: 0;
+  border-radius: 0;
+  background: rgba(126,0,26,0.5);
+  padding-left: 50px;
 }

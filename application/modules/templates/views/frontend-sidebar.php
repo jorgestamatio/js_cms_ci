@@ -23,38 +23,31 @@
 
 <div id="main-container" class="main-wrapper" data-sidebar-show>
 
-			<nav class="sidebar" role="navigation">
-				<h2>Sidebar</h2>
-				<ul>
-					<li><a class="" href="de">Deutsch</a></li>
-					<li><a class="" href="en">English</a></li>
-				</ul>
-			</nav>
+	<nav class="sidebar" role="navigation">
+		<h2>Sidebar</h2>
+		<ul>
+			<li><a class="" href="de">Deutsch</a></li>
+			<li><a class="" href="en">English</a></li>
+		</ul>
+	</nav>
 
-			
+  <!-- content push wrapper -->
+  <div class="pusher">
+    <div class="main-content"><!-- this is the wrapper for the content -->
+      <div id="main" class="clearfix">
 
-			<!-- content push wrapper -->
-			<div class="pusher">
-				
+      <button type="button" class="btn btn-lg btn-danger sidebar-toggle-btn" data-toggle-sidebar>
+        <span class="sr-only">Toggle navigation</span>
+        <span class="glyphicon glyphicon-th-list"></span>
+      </button>                                                        
 
-				<div class="main-content"><!-- this is the wrapper for the content -->
-						
-						
-						<div id="main" class="clearfix">
-
-							<button data-toggle-sidebar>Menu</button>
-
-							<?php $this->load->view($module.'/'.$view_file); ?>
+      <?php $this->load->view($module.'/'.$view_file); ?>
 
 
-						</div><!-- /main -->
-
-
-				</div><!-- /st-content -->
-
-			</div><!-- /st-pusher -->
-
-</div><!-- /st-container -->
+      </div><!-- /main -->
+    </div><!-- /main-content -->
+  </div><!-- /pusher -->
+</div><!-- /main-container -->
 
 
 
