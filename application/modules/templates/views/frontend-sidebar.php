@@ -42,7 +42,6 @@
 
       <?php $this->load->view($module.'/'.$view_file); ?>
 
-=======
 
       </div><!-- /main -->
     </div><!-- /main-content -->
