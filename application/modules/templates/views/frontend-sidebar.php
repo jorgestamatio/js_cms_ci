@@ -11,7 +11,6 @@
 	<meta name="description" content="Janine and Jorge wedding invitation">
 	<link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap.min.css" type='text/css'>
 	<link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap-glyphicons.css" type='text/css'>
-	<link rel="stylesheet" href="<?=base_url()?>assets/css/sidebar.css" type='text/css'>
 	<link rel="stylesheet" href="<?=base_url()?>assets/css/frontend.css" type='text/css'>
 	<script src="<?=base_url()?>assets/js/vendor/modernizr-2.6.2.min.js"></script>
 
@@ -43,6 +42,7 @@
 
       <?php $this->load->view($module.'/'.$view_file); ?>
 
+=======
 
       </div><!-- /main -->
     </div><!-- /main-content -->

@@ -1,9 +1,8 @@
 /*@import "sidebar.css";*/
 
-#main{
-	min-height: 2000px;
-}
 
+#main{
+=======
 .sidebar-toggle-btn{
   position: absolute;
   top: 25px;
@@ -29,4 +28,4 @@
 .sidebar .close{
   line-height: 35px;
   font-size: 30px;
-}
+=======
