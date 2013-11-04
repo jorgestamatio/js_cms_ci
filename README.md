@@ -31,11 +31,7 @@ change the database, username and password to fit your development and productio
 
 ## Mod Rewrite
 If your server supports mod rewrite, create an .htaccess file inside the main js_cms_ci folder and add the next lines.
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> sagakhan
     DirectoryIndex index.php
 
     RewriteEngine on
