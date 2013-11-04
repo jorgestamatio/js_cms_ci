@@ -25,9 +25,8 @@
 </head>
 <body>
 
-<div class="container">
-	<?php $this->load->view($view_file); ?>
-</div>
+
+<?php $this->load->view($view_file); ?>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="<?=base_url()?>assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>

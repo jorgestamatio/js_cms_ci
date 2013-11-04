@@ -15,6 +15,10 @@ date_default_timezone_set('Europe/Berlin');
 * Company information
 *
 */
+$config['SITE_TITLE'] = "App";
+$config['SITE_DESCRIPTION'] = "App description";
+
+
 $config['COMPANY_NAME'] = "JS App";
 $config['COMPANY_ADDRESS_1'] = "Route de Geneve 14"; 
 $config['COMPANY_ADDRESS_2'] = "CH-1003 Lausanne";

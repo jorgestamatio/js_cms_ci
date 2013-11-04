@@ -1,7 +1,4 @@
 <div class="jumbotron">
   <h1>Hello there!</h1>
-  <p>This are the guests!</p>
+  <p class="lead">This is your home at the backend</p>
 </div>
-
-
-<?php echo Modules::run('guests/showGuestsDashboard'); ?>

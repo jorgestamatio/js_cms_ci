@@ -7,7 +7,7 @@ class Templates extends MX_Controller{
 	}
 
 	function frontend($data){
-		$this->load->view('frontend-sidebar', $data);
+		$this->load->view('frontend', $data);
 	}
 
 	function backend($data){

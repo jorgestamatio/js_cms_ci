@@ -6,9 +6,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>J&ampJ</title>
+	<title><?=$this->config->item('SITE_TITLE')?></title>
 	<meta name="viewport" content="width=device-width">
-	<meta name="description" content="Janine and Jorge wedding invitation">
+	<meta name="description" content="<?=$this->config->item('SITE_DESCRIPTION')?>">
 	<link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap.min.css" type='text/css'>
 	<link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap-glyphicons.css" type='text/css'>
 	<link rel="stylesheet" href="<?=base_url()?>assets/css/frontend.css" type='text/css'>
@@ -39,7 +39,7 @@
     e=o.createElement(i);r=o.getElementsByTagName(i)[0];
     e.src='//www.google-analytics.com/analytics.js';
     r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-    ga('create','<?=$this->config->item('GOOGLE_ANALYTICS')?>');ga('send','pageview');
+    ga('create','<?=$this->config->item("GOOGLE_ANALYTICS")?>');ga('send','pageview');
 </script>
 </body>
 </html>
