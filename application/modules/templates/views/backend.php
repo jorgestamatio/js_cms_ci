@@ -49,8 +49,8 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="<?=base_url()?>assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-<script src="<?=base_url()?>assets/js/vendor/jQuery.fastClick.js"></script>
 <script src="<?=base_url()?>assets/js/vendor/bootstrap.min.js"></script>
+<script src="<?=base_url()?>assets/js/vendor/jquery.filedrop.js"></script>
 <script src="<?=base_url()?>assets/js/vendor/wysihtml5-0.3.0.min.js"></script>
 <script src="<?=base_url()?>assets/js/vendor/bootstrap-wysihtml5.js"></script>
 <script src="<?=base_url()?>assets/js/main.js"></script>

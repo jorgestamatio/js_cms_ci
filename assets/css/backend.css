@@ -2,4 +2,108 @@
 /*body { padding-top: 70px; } */
 
 
+/*-------------------------
+  dropzone Element
+--------------------------*/
+#dropzone{
+  background: #f8f8f8;
+  min-height: 100px;
+  overflow: hidden;
+  padding-bottom: 20px;
+  width: 100%; 
+  box-shadow:0 0 4px rgba(0,0,0,0.2) inset;
+}
+
+
+#dropzone .message{
+  font-size: 14px;
+  text-align: center;
+  padding-top: 20px;
+  display: block;
+  color: #b0b0b0;
+  text-shadow: 0 1px 0 #fff;
+  text-transform: uppercase;
+}
+
+
+
+/*-------------------------
+  Image Previews
+--------------------------*/
+
+
+
+#dropzone .preview{
+  width:100px;
+  height: auto;
+  float:left;
+  margin: 10px;
+  position: relative;
+  text-align: left;
+}
+
+#dropzone .preview img{
+  max-width: 100px;
+  max-height: 100px;
+  display: block;
+  box-shadow:0 0 1px rgba(0,0,0,0.3);
+}
+
+#dropzone .imageHolder{
+  display: inline-block;
+  position:relative;
+}
+
+#dropzone .uploaded{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  text-align:center;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  font-size: 20px;
+  color: #5cb85c;
+  display: none;
+}
+
+#dropzone .preview.done .uploaded{
+  display: block;
+}
+
+
+
+/*-------------------------
+  Progress Bars
+--------------------------*/
+
+
+
+#dropzone .progressHolder{
+  position: absolute;
+  background-color:#252f38;
+  height: 2px;
+  width:100%;
+  left:0;
+  bottom: 0;
+}
+
+#dropzone .progress{
+  background-color:#2586d0;
+  position: absolute;
+  height:100%;
+  left:0;
+  width:0; 
+  
+  -moz-transition:0.25s;
+  -webkit-transition:0.25s;
+  -o-transition:0.25s;
+  transition:0.25s;
+}
+
+#dropzone .preview.done .progress{
+  width:100% !important;
+}
+
+
 
